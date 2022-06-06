@@ -128,7 +128,7 @@ const  NavBar= () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <IconsCarrito/>
+            <IconsCarrito />
           </Box>
         </Toolbar>
       </Container>

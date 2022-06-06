@@ -4,7 +4,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 function IconsCarrito() {
   return (
       <>
-    <AddShoppingCartIcon/>
+    <AddShoppingCartIcon item={4}/>
     </>
   )
 }
