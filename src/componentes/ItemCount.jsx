@@ -1,6 +1,6 @@
 import React , {useState ,useEffect} from 'react'
 import  './ItenCount.css'
-function ItenCount({initial ,stock ,onAdd}) {
+function ItemCount({initial ,stock ,onAdd}) {
     const [count ,setCount] = useState(initial)
   
 
@@ -22,8 +22,8 @@ function ItenCount({initial ,stock ,onAdd}) {
     <div className='divTest'>
       
       <h2>{count}</h2> 
-      <button className='boton'  onClick={sumar}>sumar</button>
-      <button className='boton' onClick={restar}>restar</button>
+      <button className='boton'  onClick={sumar}>+</button>
+      <button className='boton' onClick={restar}>-</button>
      
       <button className='boton' onClick={reset}>reset</button>  
       <button className='botonAgregarCarrito' onClick={()=>onAdd(count)} >agregar al carrito</button>
@@ -33,4 +33,4 @@ function ItenCount({initial ,stock ,onAdd}) {
   )
 }
 
-export default ItenCount
+export default ItemCount

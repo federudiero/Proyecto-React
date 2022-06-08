@@ -1,11 +1,8 @@
 
 import './App.css';
-import ItenListContainer from './componentes/ItenListContainer';
-
+import ItemListContainer from './componentes/ItemListContainer';
 import NavBar from './componentes/NavBar';
-import TesPromesas from './componentes/TesPromesas';
-
-import ItenCount from './componentes/ItenCount';
+import ItemCount from './componentes/ItemCount';
 
 function App() {
   
@@ -16,9 +13,9 @@ alert(`sumaste al carrito ${count}`)
   return (
     <>
     <NavBar/>
-    <ItenListContainer saludo={`te saludo `} nombre ="juan" />
-    <ItenCount stock={5} initial={1} onAdd={onAdd} />
-    <TesPromesas/>
+    <ItemListContainer  />
+    <ItemCount stock={5} initial={1} onAdd={onAdd}  />
+    
     </>
 
   );
