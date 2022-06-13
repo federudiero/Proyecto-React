@@ -1,7 +1,9 @@
-import React, { useState ,useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import ItemList  from './ItemList'
-import '../componentes/ItenListContainer.css'
+import { useEffect, useState } from "react"
+import React  from 'react'
+import ItemDetail from "./ItemDetail";
+import {useParams} from 'react-router-dom';
+
+
 let productos=[
   {
 
@@ -151,52 +153,53 @@ let productos=[
   } ,
 
    ]
-function ItemListContainer({}) {
-  const id =useParams();
-  
-  const [producto ,setProducto]= useState([]);
 
-  useEffect(() => {
- 
+function ItemDetailContainer() {
    
-    const computadora= new Promise((res,rej)=>{
-      setTimeout(()=>
-      {(!id)? res(productos) : res(productos.filter(item=>item.id))
-      },2000)
-    })
-    computadora
-    .then((res)=>{
-      setProducto(res)
-    })
+    const [productoDetail , setProductoDetail] =useState([]);
+    const {id} =useParams();
+       
+    useEffect(() => {
+ 
+          
+   
+            const computadora= new Promise((res,rej)=>{
+              setTimeout(()=>
+              {!(id)? res(productos) : res(productos.find(item=>item.id==id))
+              },2000)
+            })
+            computadora
+            .then((res)=>{
+                setProductoDetail(res)
+            })
+        
+          
+            .catch((error)=>{
+              console.error("error",error)
+            })
+        
+            .finally(()=>{
+        
+            })
+            
+          }, [id])
+      
+          console.log(productoDetail) 
+       
+           
+            
 
-  
-    .catch((error)=>{
-      console.error("error",error)
-    })
 
-    .finally(()=>{
-
-    })
-    
-  }, [id])
-
-  console.log(producto)
-  
-
-
-
-
+        
 
   return (
-    <>
-   
-    <div className='divItenListContainer'>
-      {<ItemList   producto={producto}/>}
+    <div>
+       
+        
+      <ItemDetail productoDetail={productoDetail}/>
+        
     </div>
-
-   
-    </>
   )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer

@@ -1,0 +1,27 @@
+.divContainerDetail{
+    height: 600px;
+    width: 400px;
+    margin: 20px;
+    background-color: aqua;
+}
+
+.imgCard{
+    height: 300px;
+    width: 300px;
+    
+}
+.CardTitle{
+    font-size: 2px;
+    font-weight: 700;
+}
+.DivImgDetail{
+    height: 320px;
+    width: 320px;
+    background-color: black;
+    margin: auto;
+    
+}
+.divText{
+    text-align: center;
+    margin: auto;
+}

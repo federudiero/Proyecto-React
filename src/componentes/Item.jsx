@@ -1,8 +1,9 @@
 import React from 'react'
 import {Card ,Button } from 'react-bootstrap'
 import '../componentes/Item.css'
+
 function Item({producto}) {
-const {id ,nombre,price,pictureURL ,description} =producto
+const {id ,nombre,price,pictureURL ,description} = producto
 
 
 
@@ -25,7 +26,8 @@ const {id ,nombre,price,pictureURL ,description} =producto
       <br />
       {id}
     </Card.Text>
-    <Button className='button' variant="primary" >ver detalle del Producto</Button>
+  
+    <a href="/itemDetailContainer"><Button className='button' variant="primary" >ir ahora</Button></a>
   </Card.Body>
 </Card>
 </div>
@@ -34,3 +36,4 @@ const {id ,nombre,price,pictureURL ,description} =producto
 }
 
 export default Item
+
