@@ -21,7 +21,7 @@ import NavBar from './componentes/NavBar';
 {/* todos los productos de una categoria puntual segun el id */}
 <Route path='/itemDetailContainer' element={<ItemDetailContainer/>}/>
 {/* un productos segun el id */}
-<Route path='/item:id' element={<ItemDetailContainer/>}/>
+<Route path='/item/:id' element={<ItemDetailContainer/>}/>
 
 
 

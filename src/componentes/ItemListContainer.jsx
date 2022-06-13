@@ -34,15 +34,6 @@ let productos=[
   } ,
   {
 
-    id:'3',
-    nombre:'Notebook ASUS VivoBook',
-    price:'$40000' ,
-    description:"Notebook Asus ZenBook Pro Duo UX482EG azul celestial táctil 14 Intel Core i5 1135G7 16GB de RAM 512GB SSD, NVIDIA GeForce MX450 1920x1080px Windows 10 Home",
-    pictureURL:'https://http2.mlstatic.com/D_NQ_NP_2X_609622-MLA48061947613_102021-F.webp',
-    
-  } ,
-  {
-
     id:'4',
     nombre:'Notebook ASUS VivoBook',
     price:'$40000' ,
@@ -143,6 +134,15 @@ let productos=[
   {
 
     id:'15',
+    nombre:'Notebook ASUS VivoBook',
+    price:'$40000' ,
+    description:"Notebook Asus ZenBook Pro Duo UX482EG azul celestial táctil 14 Intel Core i5 1135G7 16GB de RAM 512GB SSD, NVIDIA GeForce MX450 1920x1080px Windows 10 Home",
+    pictureURL:'https://http2.mlstatic.com/D_NQ_NP_2X_609622-MLA48061947613_102021-F.webp',
+    
+  } ,
+  {
+
+    id:'16',
     nombre:'Notebook ASUS VivoBook',
     price:'$40000' ,
     description:"Notebook Asus ZenBook Pro Duo UX482EG azul celestial táctil 14 Intel Core i5 1135G7 16GB de RAM 512GB SSD, NVIDIA GeForce MX450 1920x1080px Windows 10 Home",

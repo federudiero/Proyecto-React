@@ -1,5 +1,6 @@
 import React from 'react'
 import {Card ,Button } from 'react-bootstrap'
+import {Link} from 'react-router-dom';
 import '../componentes/Item.css'
 
 function Item({producto}) {
@@ -27,7 +28,12 @@ const {id ,nombre,price,pictureURL ,description} = producto
       {id}
     </Card.Text>
   
-    <a href="/itemDetailContainer"><Button className='button' variant="primary" >ir ahora</Button></a>
+    <Link exact to={`/item/${id}`} >
+      <Button className="button" variant="primary">
+       ir ahora
+     </Button>
+                          
+  </Link>
   </Card.Body>
 </Card>
 </div>
