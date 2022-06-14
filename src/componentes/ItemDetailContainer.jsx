@@ -165,7 +165,7 @@ function ItemDetailContainer() {
    
             const computadora= new Promise((res,rej)=>{
               setTimeout(()=>
-              {!(id)? res(productos) : res(productos.find(item=>item.id==id))
+              {(!id)? res(productos) : res(productos.find(item=>item.id==id))
               },2000)
             })
             computadora

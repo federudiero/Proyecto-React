@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import '../componentes/Item.css'
 
 function Item({producto}) {
-const {id ,nombre,price,pictureURL ,description} = producto
+const {id ,nombre,price,pictureURL } = producto
 
 
 
@@ -20,20 +20,17 @@ const {id ,nombre,price,pictureURL ,description} = producto
     <Card.Title className='CardTitle'>{nombre}</Card.Title>
     <Card.Text className='CardText'>
       {price}
-      <br />
-      <br />
-      {description}
-      <br />
-      <br />
-      {id}
+      
+     
     </Card.Text>
-  
+  <div className='divContenedorBoton'>
     <Link exact to={`/item/${id}`} >
       <Button className="button" variant="primary">
        ir ahora
      </Button>
                           
   </Link>
+  </div>
   </Card.Body>
 </Card>
 </div>

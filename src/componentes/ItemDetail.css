@@ -1,27 +1,58 @@
 .divContainerDetail{
-    height: 600px;
-    width: 400px;
-    margin: 20px;
-    background-color: aqua;
+    background-color: rgb(242, 240, 240);
+    display: flex;
+    
+justify-content: center
 }
 
-.imgCard{
-    height: 300px;
-    width: 300px;
-    
+
+.DivCard{
+    margin: auto;
+    height: 400px;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    margin: 100px;
+    background-color: rgb(152, 151, 151);
+    border: 3px solid black;
+   transition: 1s;
 }
-.CardTitle{
-    font-size: 2px;
+.Card-Body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.divTextContainer{
+    background-color: rgb(238, 236, 233);
+    height: 300px;
+    width: 410px;
+    margin: auto;
+    border: 2px solid black;
+    
+
+   
+}
+.CardTextDetail{
+    font-size: 20px;
+    text-align: center;
     font-weight: 700;
 }
-.DivImgDetail{
-    height: 320px;
-    width: 320px;
-    background-color: black;
+.divIMGContainer{
+   
+    
     margin: auto;
+   
+}
+.imgCardDetail{
+    height: 280px;
+    width: 280px;
+}
+
+.CardTitleText{
+    font-size: 30px;
+    text-align: center;
+
     
 }
-.divText{
-    text-align: center;
-    margin: auto;
-}
+

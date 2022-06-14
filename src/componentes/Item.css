@@ -4,46 +4,85 @@ display: flex;
 .Card{
     display: flex;
 
-    background-color: rgb(224, 222, 222);
-    width: 300px;
-    height: 600px;
+    background-color: rgb(236, 236, 236);
+    width: 200px;
+    height: 350px;
     margin:auto ;
-
-    color:rgb(64, 64, 64);
+    border: 3PX SOLID rgb(0, 0, 0);
+    color:rgb(0, 0, 0);
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
+    box-shadow:2px 4px 10px rgb(0, 0, 0);
+    
+    transition: 1s;
+}
+.Card:hover{
+    display: flex;
+
+    background-color: rgb(236, 236, 236);
+    width: 200px;
+    height: 350px;
+    margin:auto ;
+border: 3PX SOLID black;
+    color:rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    box-shadow:4px 7px 30px rgb(0, 0, 0);
+    transition: 1s;
 }
 .imgCard{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 20%;
     margin: auto;
 }
 .CardTitle{
     text-align: center;
     text-decoration: underline;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .CardText{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 700;
+    
+    
 }
 .button{
     height: 30px;
     width: 200px;
+    background-color: black;
+    margin: auto;
+    color: azure;
+    font-size: 15px;
+    cursor: pointer;
+    
+    
+   transition: 1s;
+    
+}
+.button:hover{
+    height: 30px;
+    width: 200px;
+    
     background-color: black;
     color: azure;
     font-size: 15px;
     cursor: pointer;
     align-items: center;
     text-align: center;
+   
+    transition: 1s;
+    box-shadow:4px 7px 15px rgb(76 71 71);
     
+}
+.divContenedorBoton{
+   
+    text-align: center;
 }
