@@ -6,9 +6,9 @@ display: flex;
 
     background-color: rgb(236, 236, 236);
     width: 200px;
-    height: 350px;
+    height: 310px;
     margin:auto ;
-    border: 3PX SOLID rgb(0, 0, 0);
+    
     color:rgb(0, 0, 0);
     flex-direction: column;
     justify-content: space-evenly;
@@ -23,9 +23,9 @@ display: flex;
 
     background-color: rgb(236, 236, 236);
     width: 200px;
-    height: 350px;
+    height: 310px;
     margin:auto ;
-border: 3PX SOLID black;
+
     color:rgb(0, 0, 0);
     flex-direction: column;
     justify-content: space-evenly;
@@ -35,8 +35,8 @@ border: 3PX SOLID black;
     transition: 1s;
 }
 .imgCard{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 20%;
     margin: auto;
 }
@@ -64,21 +64,21 @@ border: 3PX SOLID black;
     cursor: pointer;
     
     
-   transition: 1s;
+   transition: .7s;
     
 }
 .button:hover{
     height: 30px;
     width: 200px;
     
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: azure;
     font-size: 15px;
     cursor: pointer;
     align-items: center;
     text-align: center;
    
-    transition: 1s;
+    transition: .7s;
     box-shadow:4px 7px 15px rgb(76 71 71);
     
 }
