@@ -6,15 +6,15 @@ display: flex;
 
     background-color: rgb(236, 236, 236);
     width: 200px;
-    height: 310px;
+    height: 350px;
     margin:auto ;
-    
+   
     color:rgb(0, 0, 0);
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
-    box-shadow:2px 4px 10px rgb(0, 0, 0);
+border-radius: 10%;
     
     transition: 1s;
 }
@@ -23,21 +23,21 @@ display: flex;
 
     background-color: rgb(236, 236, 236);
     width: 200px;
-    height: 310px;
+    height: 350px;
     margin:auto ;
-
+    border-radius: 10%;
     color:rgb(0, 0, 0);
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
-    box-shadow:4px 7px 30px rgb(0, 0, 0);
+    box-shadow:0px 11px 20px rgb(0 0 0);
     transition: 1s;
 }
 .imgCard{
-    width: 150px;
-    height: 150px;
-    border-radius: 20%;
+    width: 170px;
+    height:170px;
+    
     margin: auto;
 }
 .CardTitle{
@@ -56,7 +56,7 @@ display: flex;
 }
 .button{
     height: 30px;
-    width: 200px;
+    width: 170px;
     background-color: black;
     margin: auto;
     color: azure;

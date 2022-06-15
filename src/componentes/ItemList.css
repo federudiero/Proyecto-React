@@ -3,6 +3,8 @@
     gap: 1rem;
     grid-auto-rows: 29rem;
     grid-template-columns: repeat(auto-fill, minmax(18rem ,1fr) );
-    background-color: rgb(160, 160, 160);
+    background-image: linear-gradient(to top, #EDE9E7 0%, #EDE9E7 100%);
+   
+    
    
 }

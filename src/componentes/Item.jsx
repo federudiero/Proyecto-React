@@ -15,7 +15,9 @@ const {id ,nombre,price,pictureURL } = producto
 <div className='divContainerCard'>
 
    <Card  className='Card' >
+   
   <Card.Img variant="top" className='imgCard' src={pictureURL} />
+ 
   <Card.Body>
     <Card.Title className='CardTitle'>{nombre}</Card.Title>
     <Card.Text className='CardText'>
@@ -24,9 +26,9 @@ const {id ,nombre,price,pictureURL } = producto
      
     </Card.Text>
   <div className='divContenedorBoton'>
-    <Link exact to={`/item/${id}`} >
+    <Link  to={`/item/${id}`} >
       <Button className="button" variant="primary">
-       ir ahora
+       ver detalle
      </Button>
                           
   </Link>

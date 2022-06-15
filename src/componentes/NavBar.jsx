@@ -14,11 +14,23 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import IconsCarrito from './IconsCarrito';
+import { Link, useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const  NavBar= () => {
+const  NavBar= ({}) => {
+  const {category} =useParams()
+
+  useEffect(() => {
+   
+  console.log(category)
+   
+    
+  }, [category])
+  
+ 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -57,7 +69,7 @@ const  NavBar= () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Ecommerce
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -113,18 +125,30 @@ const  NavBar= () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Ecommerce
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          
+          <Link  to="/category/notebook" >
+            <Button className="button" variant="primary">
+              Notebook
+            </Button>
+                          
+          </Link>
+          <Link to="/category/celulares" >
+            <Button className="button" variant="primary">
+              Celulares
+            </Button>
+                          
+          </Link>
+          <Link to="/category/televisores" >
+            <Button className="button" variant="primary">
+              televisores
+            </Button>
+                          
+          </Link>
+          
+              
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

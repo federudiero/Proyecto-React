@@ -1,9 +1,11 @@
 
+import { Slider } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import ItemListContainer from './componentes/ItemListContainer';
 import NavBar from './componentes/NavBar';
+
 
  function App() {
   
@@ -15,13 +17,19 @@ import NavBar from './componentes/NavBar';
     <>
 <BrowserRouter>
 <NavBar/>  
+
 <Routes>
 {/* mostrar todos los productos */}
-<Route path='/' element={<ItemListContainer/>}   />
+<Route path='/' element={<ItemListContainer/>}></Route>
+
+
 {/* todos los productos de una categoria puntual segun el id */}
-<Route path='/itemDetailContainer' element={<ItemDetailContainer/>}/>
+<Route path='/category/:id' element={<ItemListContainer/>}></Route>
+
+
 {/* un productos segun el id */}
-<Route path='/item/:id' element={<ItemDetailContainer/>}/>
+<Route path='/item/:id' element={<ItemDetailContainer/>}></Route>
+
 
 
 
@@ -38,4 +46,8 @@ import NavBar from './componentes/NavBar';
   );
 }
 
+
 export default App;
+
+
+
