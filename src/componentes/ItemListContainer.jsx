@@ -682,7 +682,7 @@ let productos=[
     Conectá tus dispositivos mediante sus 3 puertos HDMI y su puerto USB.
     Con sistema de cables ocultos.`,
     pictureURL:'https://http2.mlstatic.com/D_NQ_NP_2X_753214-MLA48707187900_122021-F.webp',
-     pictureURL2:'https://http2.mlstatic.com/D_NQ_NP_2X_617268-MLA48707503015_122021-F.webp',
+    pictureURL2:'https://http2.mlstatic.com/D_NQ_NP_2X_617268-MLA48707503015_122021-F.webp',
     pictureURL3:'https://http2.mlstatic.com/D_NQ_NP_2X_811638-MLA48707260662_122021-F.webp',
     
   } 
@@ -704,7 +704,7 @@ let productos=[
     Conectá tus dispositivos mediante sus 3 puertos HDMI y su puerto USB.
     Con sistema de cables ocultos.`,
     pictureURL:'https://http2.mlstatic.com/D_NQ_NP_2X_737400-MLA43269941631_082020-F.webp',
-     pictureURL2:'https://http2.mlstatic.com/D_NQ_NP_2X_821170-MLA43247215220_082020-F.webp',
+    pictureURL2:'https://http2.mlstatic.com/D_NQ_NP_2X_821170-MLA43247215220_082020-F.webp',
 
     
   } 

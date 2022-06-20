@@ -17,7 +17,8 @@ const {id ,nombre,price,pictureURL } = producto
    <Card  className='Card' >
    
   <Card.Img variant="top" className='imgCard' src={pictureURL} />
- 
+  
+
   <Card.Body>
     <Card.Title className='CardTitle'>{nombre}</Card.Title>
     <Card.Text className='CardText'>

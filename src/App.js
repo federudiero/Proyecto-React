@@ -1,14 +1,16 @@
 
 import { Slider } from "@mui/material";
+import { createContext } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import ItemListContainer from './componentes/ItemListContainer';
 import NavBar from './componentes/NavBar';
 
+ 
 
- function App() {
-  
+function App() {
+
 //   const onAdd=(count)=>{
     
 // alert(`sumaste al carrito ${count}`)

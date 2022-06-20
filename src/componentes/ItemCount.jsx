@@ -1,16 +1,14 @@
-import React , {useState ,useEffect} from 'react'
-import  './ItenCount.css'
-function ItemCount({initial ,stock ,onAdd}) {
-    const [count ,setCount] = useState(initial)
-  
+import React , {useState} from 'react'
+import {Button} from 'react-bootstrap';
 
-    const sumar= ()=>{
-      count<stock? setCount(count+1): alert("no puedes agregar mas productos")
-      }
-    const restar= ()=>{
-      count>initial? setCount(count-1): alert("no puedes agregar mas productos")
-    }
-    const reset= ()=>{setCount(initial)}
+import  './ItenCount.css'
+function ItemCount({sumar,count, restar, onAdd}) {
+
+ 
+
+  
+  
+    
 
 
    
@@ -18,15 +16,15 @@ function ItemCount({initial ,stock ,onAdd}) {
   return (
     <>
     <div className='DivContainer'>
-    <h2>ejercicio contador Rudiero Federico</h2>
+   
     <div className='divTest'>
       
       <h2>{count}</h2> 
       <button className='boton'  onClick={sumar}>+</button>
       <button className='boton' onClick={restar}>-</button>
-     
-      <button className='boton' onClick={reset}>reset</button>  
-      <button className='botonAgregarCarrito' onClick={()=>onAdd(count)} >agregar al carrito</button>
+      <Button className='botonAgregarCarrito'  onClick={()=>onAdd(count)} >agregar al carrito</Button>
+    
+    
     </div>
     </div>
     </>

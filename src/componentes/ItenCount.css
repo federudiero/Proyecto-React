@@ -1,13 +1,13 @@
 .divTest{
-    background-color: brown;
+    background-color: rgba(216, 176, 176, 0.186);
     display: flex;
-    height: 300px;
-    width: 300px;
-    flex-direction: column;
+    height: 60px;
+    width: 370px;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid black;
-    border-radius: 20%;
+    
+  
 
     
 }
@@ -15,7 +15,7 @@
     text-align: center;
     display: flex;
     align-items: center;
-    background-color: rgb(123, 123, 123);
+
     gap: 20px;
     
     flex-direction: column
