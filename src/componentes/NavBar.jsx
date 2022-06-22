@@ -15,14 +15,17 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CartWidget from './CartWidget';
 import { Link, useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import {useEffect, } from 'react';
+
+
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const  NavBar= ({}) => {
   const {category} =useParams()
-
+  
+ 
   useEffect(() => {
    
   console.log(category)
@@ -152,7 +155,7 @@ const  NavBar= ({}) => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <CartWidget />
+            <CartWidget  />
           </Box>
         </Toolbar>
       </Container>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Item from './Item'
-import '../componentes/ItemList.css'
+import '../componentes/css/ItemList.css'
 
 function ItemList({producto}) {
     

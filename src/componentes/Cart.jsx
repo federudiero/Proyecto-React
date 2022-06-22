@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from './Context/CartContext'
 import {Link} from 'react-router-dom';
-import '../componentes/Cart.css'
+import '../componentes/css/Cart.css'
 
 
 
@@ -18,7 +18,7 @@ import '../componentes/Cart.css'
       <h4 className='titleCart'>Carrito de compras</h4>
 
 
-      {getItemQty() > 0 ?
+      {getItemQty() >0  ?
 
         <div className='cardCarrito'>
           <div className='tamanoTitleCart'>
@@ -32,11 +32,11 @@ import '../componentes/Cart.css'
 
             <div className='lineCart'>
               <div className='cartContainer'>
-                <img className='imgProducto img-fluid' src={productoDetail.pictureUrl} alt={"Producto1"} width="70px" />
+                <img className='imgProducto img-fluid' src={productoDetail.pictureURL} alt={"Producto1"} width="70px" />
                 <p className='cantidadCart'>{productoDetail.cantidad} x {productoDetail.nombre}</p>
-                <p className='precioCart'>Precio: ${productoDetail.price}</p>
-                <p className='subtotalCart'>Subtotal: ${productoDetail.count * productoDetail.price}</p>
-                <p onClick={() => deleteItem(productoDetail.id)} className='eliminarItemCard'><img className='imgBasura img-fluid' src={productoDetail.pictureUrl} alt={"Producto1"} width="30px" /></p>
+                <p className='precioCart'>Precio: {productoDetail.price}</p>
+                <p className='subtotalCart'>Subtotal: ${productoDetail.cantidad* productoDetail.price}</p>
+                <p onClick={() => deleteItem(productoDetail.id)} className='eliminarItemCard'><img className='imgBasura img-fluid' src={productoDetail.pictureURL} alt={"Producto1"} width="30px" /></p>
               </div>
             </div>
           ))}

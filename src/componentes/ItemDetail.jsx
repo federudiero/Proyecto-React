@@ -4,7 +4,7 @@ import {Card, Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {useState} from 'react';
 
-import '../componentes/ItemDetail.css'
+import '../componentes/css/ItemDetail.css'
 import ItemCount from './ItemCount';
 import { useContext } from 'react';
 import  { CartContext } from './Context/CartContext';
@@ -13,9 +13,10 @@ import  { CartContext } from './Context/CartContext';
 
 
 function ItemDetail( {productoDetail}) {
+  
 
-  const {id ,nombre,price,pictureURL , pictureURL2, pictureURL3,description ,stock } = productoDetail
-  console.log(productoDetail)
+  const {id, nombre,price,pictureURL ,description ,stock } = productoDetail
+ 
 
   const [unidades, setUnidades] = useState();
   const [count, setCount] = useState(1)  
@@ -23,11 +24,17 @@ function ItemDetail( {productoDetail}) {
   const {isInCart,addItem} =useContext(CartContext)
   
   
-  function onAdd(count ){
+  function onAdd(count){
+    console.log(count)
     alert(`Se han agregado: ${count} productos`);
+     isInCart(productoDetail.id);
+    addItem(productoDetail,count);
+    
     setUnidades(count);
-    isInCart(productoDetail.id)
-    addItem(productoDetail,count)
+    
+   
+    
+    
   }
 
   
@@ -49,8 +56,7 @@ function ItemDetail( {productoDetail}) {
                     <div className='divIMGContainer'>
                     <Card.Img variant="top" className='imgCardDetail' src={pictureURL} />
                     <div className='divContainerImgMin'>
-                    <Card.Img variant="top" className='imgCardMin' src={pictureURL2} />
-                    <Card.Img variant="top" className='imgCardMin' src={pictureURL3} />
+                   
                     </div>
                     </div>
                     <div className='divTextContainer'>
@@ -58,13 +64,14 @@ function ItemDetail( {productoDetail}) {
                         <Card.Title className='CardTitleText'>{nombre}</Card.Title>
                         <Card.Text className='CardTextDetail'>
 
-                        <p className='precioText'>{price}</p>
+                        <p className='precioText'>${price}</p>
                           
                           
                           
                         <p className='DescriptionText'>{description}</p>
                           
                         <p className='stockText'>Stock  {stock}</p>
+                        {id}
 
                           
                           

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Card ,Button } from 'react-bootstrap'
 import {Link} from 'react-router-dom';
-import '../componentes/Item.css'
+import '../componentes/css/Item.css'
 
 function Item({producto}) {
 const {id ,nombre,price,pictureURL } = producto
@@ -22,7 +22,7 @@ const {id ,nombre,price,pictureURL } = producto
   <Card.Body>
     <Card.Title className='CardTitle'>{nombre}</Card.Title>
     <Card.Text className='CardText'>
-      {price}
+      ${price}
       
      
     </Card.Text>
