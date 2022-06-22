@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import IconsCarrito from './IconsCarrito';
+import CartWidget from './CartWidget';
 import { Link, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -152,7 +152,7 @@ const  NavBar= ({}) => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <IconsCarrito />
+            <CartWidget />
           </Box>
         </Toolbar>
       </Container>

@@ -1,7 +1,7 @@
 .divTest{
     background-color: rgba(216, 176, 176, 0.186);
     display: flex;
-    height: 60px;
+    height: 200px;
     width: 370px;
     flex-direction: row;
     justify-content: space-around;

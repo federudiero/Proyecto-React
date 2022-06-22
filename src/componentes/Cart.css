@@ -1,0 +1,124 @@
+.centerCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    min-height: 75vh;
+  }
+  .titleCart{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .cardCarrito{
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgb(71 71 71 / 30%) 0px 0px 40px 1px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .tamanoTitleCart{
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+   }
+
+   .cartContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.3fr;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+                        "imgProducto cantidadCart precioCart subtotalCart eliminarItemCard"
+                        "imgProducto cantidadCart precioCart subtotalCart eliminarItemCard"
+                        "imgProducto cantidadCart precioCart subtotalCart eliminarItemCard"
+                        "imgProducto cantidadCart precioCart subtotalCart eliminarItemCard"
+  
+   }
+   .cantidadCart{
+    grid-area: cantidadCart;
+    text-align: center;
+  }
+  .precioCart{
+    grid-area: precioCart;
+    text-align: center;
+  }
+
+  .subtotalCart{
+    grid-area: subtotalCart;
+    text-align: center;
+  }
+  .lineCart{
+    border-top: 0.5px solid rgba(0, 0, 0, 0.185);
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .impFinal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .labelTotal{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .btnAddCar{
+    background-color: #947EC3;
+    border: black 0.1px solid;
+    padding: 5px;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 20px;
+    text-decoration: dashed;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+  }
+  
+  .btnAddCar:hover{
+    background-color: #c7bce0;
+    border: black 0.1px solid;
+    padding: 5px;
+    color: #292929;
+    font-weight: 500;
+    text-decoration: dashed;
+  }
+  .btnFinalC{
+    margin-right: 40px;
+  }
+
+  .btnVaciarCarrito{
+    color: red;
+    background-color: white;
+    border: none;
+    font-weight: 500;
+  }
+  .noHayCompras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    min-height: 75vh;
+  }
+  .btnIrDeCompras{
+    margin-top: 50px;
+    background-color: #947EC3;
+    border: black 0.1px solid;
+    padding: 5px;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 20px;
+    text-decoration: dashed;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+

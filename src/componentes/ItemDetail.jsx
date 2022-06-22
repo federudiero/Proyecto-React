@@ -6,17 +6,29 @@ import {useState} from 'react';
 
 import '../componentes/ItemDetail.css'
 import ItemCount from './ItemCount';
+import { useContext } from 'react';
+import  { CartContext } from './Context/CartContext';
 
 
 
 
 function ItemDetail( {productoDetail}) {
 
-  const { nombre,price,pictureURL , pictureURL2, pictureURL3,description ,stock } = productoDetail
+  const {id ,nombre,price,pictureURL , pictureURL2, pictureURL3,description ,stock } = productoDetail
   console.log(productoDetail)
 
   const [unidades, setUnidades] = useState();
   const [count, setCount] = useState(1)  
+
+  const {isInCart,addItem} =useContext(CartContext)
+  
+  
+  function onAdd(count ){
+    alert(`Se han agregado: ${count} productos`);
+    setUnidades(count);
+    isInCart(productoDetail.id)
+    addItem(productoDetail,count)
+  }
 
   
   const sumar= ()=>{
@@ -26,11 +38,7 @@ function ItemDetail( {productoDetail}) {
     count>1? setCount(count-1): alert("no puedes agregar mas productos")
   }
   
-  function onAdd(count){
-    alert(`Se han agregado: ${count} productos`);
-    setUnidades(count);
-  }
-
+  
  return (
 
     <>
