@@ -2,6 +2,7 @@ import React, { useState ,useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList  from './ItemList'
 import '../componentes/css/ItenListContainer.css'
+import  Carousel from './Carousel'
 let productos=[
   {
 
@@ -26,7 +27,7 @@ let productos=[
     nombre:'Notebook ASUS VivoBook',
 
     price:40000 ,
-    description:"Notebook Asus ZenBook Pro Duo UX482EG azul celestial táctil 14 Intel Core i5 1135G7 16GB de RAM 512GB SSD, NVIDIA GeForce MX450 1920x1080px Windows 10 Home",
+    description:"Notebook Asus ZenBook Pro Duo UX482EG ",
     pictureURL:'https://http2.mlstatic.com/D_NQ_NP_2X_609622-MLA48061947613_102021-F.webp',
      pictureURL2:'https://http2.mlstatic.com/D_NQ_NP_2X_668050-MLA49303776893_032022-F.webp',
     pictureURL3:'https://http2.mlstatic.com/D_NQ_NP_2X_668050-MLA49303776893_032022-F.webp',
@@ -74,7 +75,7 @@ let productos=[
 
     id:6,
     category:"notebook",
-    nombre:'Notebook ASUS ROG ZEPHYRUS',
+    nombre:'Notebook ASUS ROG ',
     price: 350000 ,
     description:"Notebook ASUS ROG ZEPHYRUS 14 WQHD RYZEN 9 4900HS 16GB 1TB SSD NVMe RTX 2060",
     pictureURL:'https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_26535_Notebook_ASUS_ROG_ZEPHYRUS_14__WQHD_RYZEN_9_4900HS_16GB_1TB_SSD_NVMe_RTX_2060_b8ffd6ee-grn.jpg',
@@ -134,7 +135,7 @@ let productos=[
 
     id:11,
     category:"notebook",
-    nombre:'Notebook ASUS UX5401',
+    nombre:'Notebook ASUS ',
     price: 200000 ,
     description:"Notebook ASUS UX5401 14 Core I5 1135G7 8GB 512GB SSD OLED W10",
     pictureURL:'https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30592_Notebook_ASUS_UX5401_14__Core_I5_1135G7_8GB_512GB_SSD_OLED_W10_f059b8fd-grn.jpg',
@@ -170,7 +171,7 @@ let productos=[
 
     id:14,
     category:"notebook",
-    nombre:'Notebook Gamer ASUS ROG ZEPHYRUS',
+    nombre:'Notebook Gamer ASUS ROG ',
     price:275000,
     description:"Notebook Gamer ASUS ROG ZEPHYRUS G14 14 Ryzen 7 5800HS 16GB (2x8GB) 512GB SSD RTX 3050 144Hz W10",
     pictureURL:'https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30570_Notebook_Gamer_ASUS_ROG_ZEPHYRUS_G14_14__Ryzen_7_5800HS_16GB__2x8GB__512GB_SSD_RTX_3050_144Hz_W10_2d7b6e2b-grn.jpg',
@@ -194,7 +195,7 @@ let productos=[
 
     id:16,
     category:"notebook",
-    nombre:'Notebook Gamer ASUS ROG ZEPHYRUS',
+    nombre:'Notebook Gamer ASUS ROG ',
     price:281000 ,
     description:"Notebook Gamer ASUS ROG ZEPHYRUS G14 14 Ryzen 7 5800HS 16GB (2x8GB) 512GB SSD RTX 3050 144Hz W10 ANIME MATRIX",
     pictureURL:'https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30568_Notebook_Gamer_ASUS_ROG_ZEPHYRUS_G14_14__Ryzen_7_5800HS_16GB__2x8GB__512GB_SSD_RTX_3050_144Hz_W10_ANIME_MATRIX_5d444937-grn.jpg',
@@ -206,7 +207,7 @@ let productos=[
 
     id:17,
     category:"celulares" ,
-    nombre:'Samsung Galaxy S22 Ultra 12gb 256gb Green',
+    nombre:'Samsung Galaxy S22 ',
     price:209999 ,
     description:"Dispositivo liberado para que elijas la compañía telefónica que prefieras, Pantalla Dynamic AMOLED 2X de 6.8,Cámara delantera de 40Mpx.,Batería de 5000mAh ,Memoria interna de 256GB ,Tarjeta eSIM incluida.",
     pictureURL:'https://http2.mlstatic.com/D_NQ_NP_2X_668050-MLA49303776893_032022-F.webp',
@@ -218,7 +219,7 @@ let productos=[
 
     id:18,
     category:"celulares" ,
-    nombre:'Motorola Edge 20 Lite 128 GB gris 6 GB RAM',
+    nombre:'Motorola Edge 20 Lite ',
     price:72.999 ,
     description:"Dispositivo liberado para que elijas la compañía telefónica que prefieras, Pantalla Dynamic AMOLED 2X de 6.8,Cámara delantera de 40Mpx.,Batería de 5000mAh ,Memoria interna de 256GB ,Tarjeta eSIM incluida.Compatible con redes 5G.Pantalla OLED de 6.7,Pantalla OLED de 6.7.Cámara delantera de 32Mpx.Procesador MediaTek Dimensity 720 Octa-Core de 2GHz con 6GB de RAM",
     pictureURL:'https://http2.mlstatic.com/D_NQ_NP_2X_833619-MLA48233725917_112021-F.webp',
@@ -230,7 +231,7 @@ let productos=[
 
     id:19,
     category:"celulares" ,
-    nombre:'Moto G60s 128 GB azul 6 GB RAM',
+    nombre:'Moto G60s 128',
     price:54999,
     description:"Dispositivo liberado para que elijas la compañía telefónica que prefieras.Pantalla IPS de 6.8.Tiene 4 cámaras traseras de 64Mpx/8Mpx/5Mpx/2Mpx.Cámara delantera de 16Mpx.Procesador MediaTek MT6382 Helio G95 Octa-Core de 2.05GHz con 6GB de RAM.Batería de 5000mAh.Memoria interna de 128GB.Resistente a las salpicaduras.Con reconocimiento facial y sensor de huella dactilar.Resistente al polvo.",
     pictureURL:'https://http2.mlstatic.com/D_NQ_NP_2X_788340-MLA48112659213_112021-F.webp',
@@ -242,7 +243,7 @@ let productos=[
 
     id:20,
     category:"celulares" ,
-    nombre:'Samsung Galaxy S20 FE 5G 128 GB cloud navy 6 GB RAM' ,
+    nombre:'Samsung Galaxy S20 ' ,
     price:89999 ,
     description:`
     Dispositivo liberado para que elijas la compañía telefónica que prefieras
@@ -265,7 +266,7 @@ let productos=[
 
     id:21,
     category:"celulares" ,
-    nombre:'Samsung Galaxy S21 Fe Gris Oscuro 5g' ,
+    nombre:'Samsung Galaxy S21 ' ,
     price:104999,
     description:`
     Dispositivo liberado para que elijas la compañía telefónica que prefieras
@@ -288,7 +289,7 @@ let productos=[
 
     id:22,
     category:"celulares" ,
-    nombre:'Samsung Galaxy A52 128 GB awesome white 6 GB RAM' ,
+    nombre:'Samsung Galaxy A52 ' ,
     price:75999 ,
     description:`
     Dispositivo liberado para que elijas la compañía telefónica que prefieras
@@ -311,7 +312,7 @@ let productos=[
 
     id:23,
     category:"celulares" ,
-    nombre:'Xiaomi Redmi 9A Dual SIM 32 GB gris granito 2 GB RAM'   ,
+    nombre:'Xiaomi Redmi 9A '   ,
     price:28226 ,
     description:`
     Dispositivo liberado para que elijas la compañía telefónica que prefieras
@@ -334,7 +335,7 @@ let productos=[
 
     id:24,
     category:"celulares" ,
-    nombre:'Samsung Galaxy Z Flip3 5G 128 GB cream 8 GB RAM ' ,
+    nombre:'Samsung Galaxy Z ' ,
     price:118999 ,
     description:`
     Dispositivo liberado para que elijas la compañía telefónica que prefieras
@@ -357,7 +358,7 @@ let productos=[
 
     id:25,
     category:"celulares" ,
-    nombre:'Moto G71 128 GB neptune green 6 GB RAM ' ,
+    nombre:'Moto G71 ' ,
     price:62299 ,
     description:`
     Dispositivo liberado para que elijas la compañía telefónica que prefieras
@@ -380,7 +381,7 @@ let productos=[
 
     id:26,
     category:"celulares" ,
-    nombre:'Motorola Edge 20 Pro 256 GB blanco optic 12 GB RAM ' ,
+    nombre:'Motorola Edge  ' ,
     price:119999 ,
     description:`
     Dispositivo liberado para que elijas la compañía telefónica que prefieras
@@ -403,7 +404,7 @@ let productos=[
 
     id:27,
     category:"celulares" ,
-    nombre:'Samsung Galaxy S20 FE 5G 128 GB cloud navy 6 GB RAM' ,
+    nombre:'Samsung Galaxy S20' ,
     price:45999 ,
     description:`
     Dispositivo liberado para que elijas la compañía telefónica que prefieras
@@ -426,7 +427,7 @@ let productos=[
 
     id:28,
     category:"celulares" ,
-    nombre:'Moto G41 128 GB negro ónix 4 GB RAM  ' ,
+    nombre:'Moto G41  ' ,
     price:44.999 ,
     description:`
     Dispositivo liberado para que elijas la compañía telefónica que prefieras
@@ -449,7 +450,7 @@ let productos=[
 
     id:29,
     category:"celulares" ,
-    nombre:'Moto G41 128 GB negro ónix 4 GB RAM ' ,
+    nombre:'Moto G41  ' ,
     price:44999 ,
     description:`
     Dispositivo liberado para que elijas la compañía telefónica que prefieras
@@ -472,7 +473,7 @@ let productos=[
 
     id:30,
     category:"televisores" ,
-    nombre:'Smart TV Samsung Series 7 UN50AU7000GCZB LED 4K 50 220V - 240V' ,
+    nombre:'Smart TV Samsung Series 7' ,
     price:94499,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -494,7 +495,7 @@ let productos=[
 
     id:31,
     category:"televisores" ,
-    nombre:'Smart TV Philips 6800 Series 32PHD6825/77 LED HD 32" 110V/240V' ,
+    nombre:'Smart TV Philips 6800 ' ,
     price:37599 ,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -515,7 +516,7 @@ let productos=[
   {
     id:32,
     category:"televisores" ,
-    nombre:'Smart TV Samsung Series 4 UN32T4300AGCZB LED HD 32" 220V - 240V' ,
+    nombre:'Smart TV Samsung ' ,
     price:44999 ,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -537,7 +538,7 @@ let productos=[
 
     id:33,
     category:"televisores" ,
-    nombre:'Smart TV Philips 7000 Series 50PUD7406/77 LED 4K 50" 110V/240V' ,
+    nombre:'Smart TV Philips ' ,
     price:90999 ,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -559,7 +560,7 @@ let productos=[
 
     id:34,
     category:"televisores" ,
-    nombre:'Smart TV Noblex DJ50X6500 LED 4K 50" 220V' ,
+    nombre:'Smart TV Noblex' ,
     price:78999 ,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -581,7 +582,7 @@ let productos=[
 
     id:35,
     category:"televisores" ,
-    nombre:'Smart TV TCL S60A-Series L32S60A LED HD 32" 100V/240V' ,
+    nombre:'Smart TV TCL' ,
     price:94499 ,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -603,7 +604,7 @@ let productos=[
 
     id:36,
     category:"televisores" ,
-    nombre:'Smart TV RCA X55ANDTV LED 4K 55" 100V/240V' ,
+    nombre:'Smart TV RCA ' ,
     price:88999 ,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -625,7 +626,7 @@ let productos=[
 
     id:37,
     category:"televisores" ,
-    nombre:'Smart TV TCL S6500-Series L42S6500 LED Full HD 42" 220V ' ,
+    nombre:'Smart TV TCL  ' ,
     price:51999 ,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -646,7 +647,7 @@ let productos=[
 
     id:38,
     category:"televisores" ,
-    nombre:'Smart TV Noblex 91DM32X7000PI LED HD 32" 220V' ,
+    nombre:'Smart TV Noblex ' ,
     price:36434 ,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -668,7 +669,7 @@ let productos=[
 
     id:39,
     category:"televisores" ,
-    nombre:'Smart TV LG AI ThinQ 43UP7750PSB LCD 4K 43" 100V/240V' ,
+    nombre:'Smart TV LG AI' ,
     price:75249 ,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -690,7 +691,7 @@ let productos=[
 
     id:40,
     category:"televisores" ,
-    nombre:'Smart TV RCA XF32SM LED HD 32" 110V/240V' ,
+    nombre:'Smart TV RCA ' ,
     price:34999 ,
     description:`Su resolución es 4K.
     Tecnología HDR para una calidad de imagen mejorada.
@@ -751,8 +752,13 @@ function ItemListContainer() {
 
   return (
     <>
+    { <Carousel/>}
+    <div className='divTituloPortada'><h1 className='TituloPortada'>Ecommerce</h1></div>
    
     <div className='divItenListContainer'>
+
+      
+
       {<ItemList   producto={producto}/>}
     </div>
 

@@ -8,6 +8,8 @@ import NavBar from './componentes/NavBar';
 import MyProvider from "./componentes/Context/CartContext";
 import Cart from './componentes/Cart';
 
+
+
  
 
 function App() {
@@ -18,14 +20,16 @@ function App() {
 //   }
   return (
     <>
-   
+   <MyProvider >
       <BrowserRouter>
-      <MyProvider >
+      
+     
       <NavBar/>  
-
+    
+      
       <Routes>
           {/* mostrar todos los productos */}
-          <Route path='/' element={<ItemListContainer/>}></Route>
+          <Route path='/' element={<ItemListContainer  />}></Route>
 
 
           {/* todos los productos de una categoria puntual segun el id */}
@@ -39,8 +43,9 @@ function App() {
 
 
       </Routes>
-      </MyProvider>
+      
       </BrowserRouter>
+      </MyProvider>
       
 </>
 

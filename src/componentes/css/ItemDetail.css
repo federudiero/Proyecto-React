@@ -1,122 +1,59 @@
-.divContainerDetail{
-    background-color: rgb(21, 34, 48);
-    display: flex;
+.DivContainerDetail{
+    background-color: rgb(224, 224, 224);
+   display: flex;
+   justify-content: center;
+}
+.divCONtainerItem{
+    margin: 30px;
+    border: 1px solid;
+}
+
+.DIvcard{
     
-justify-content: center
-}
-
-
-.DivCard{
-    margin: auto;
-    height: max-content;
-    width: max-content;
     display: flex;
-    flex-direction: row;
-    margin: 100px;
-    background-color: rgb(255, 255, 255);
    
-   transition: 1s;
-}
-.Card-Body{
-    display: flex;
-    align-items: center;
     flex-direction: column;
-}
-
-.divTextContainer{
-    background-color: rgb(238, 236, 233);
-    height: 530px;
-    width: 610px;
-    margin: auto;
-    
-    
-
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+   
    
 }
-.precioText{
-    text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-}
-.DescriptionText{
-    text-align: justify;
-    padding: 10px;
-
-}
-.stockText{
-    text-align: center;
-    font-weight: 700;
-}
-.divIMGContainer{
-   
+.imgDetailContainer{
     
-    margin: auto;
-   
+    height: 300px;
+    width: 300px;
 }
-.imgCardDetail{
-    height: 280px;
-    width: 280px;
+.h2cardTitle{
+    padding: 20px;
+    padding-bottom: 10px;
+    font-weight: 600;
 }
-
-.CardTitleText{
+.pcardText{
+    padding: 20px;
+    height: 200px;
+    width: 600px;
+}
+.precioLi{
     font-size: 30px;
-    text-align: center;
-
-    
+    font-weight: 600;
 }
 
-.divContainerImgMin{
-    display: flex;
-}
-.imgCardMin{
-    height: 70px;
-    width: 70px;
-}
 
-.divContainerLink{
-    display: flex;
-    height: 20px;
-    flex-direction: column;
-}
-.button{
-    height: 30px;
-    width: 170px;
-    background-color: black;
-    margin: auto;
-    color: azure;
-    font-size: 15px;
-    cursor: pointer;
-    
-    
-   transition: .7s;
-    
-}
-.button:hover{
-    height: 30px;
-    width: 170px;
-    
-    background-color: rgb(0, 0, 0);
-    color: azure;
-    font-size: 15px;
-    cursor: pointer;
-    align-items: center;
-    text-align: center;
-   
-    transition: .7s;
-    box-shadow:4px 7px 15px rgb(76 71 71);
-    
-}
+
+
+
+
+
+
+
+
+
+
+
 .btn-fin{
-    height: 30px;
-    width: 200px;
-    background-color: black;
-    color: aliceblue;
-    font-weight: 700;
+    background-color: #292b2c;
+    color: #c7c7c7;
     text-decoration: none;
-    text-align: center;
-    transition: 0.8s;
-    cursor: pointer;
-    
-
+    margin: 3px;
 }
-

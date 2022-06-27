@@ -2,12 +2,14 @@ import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from './Context/CartContext'
 import {Link} from 'react-router-dom';
-import '../componentes/css/Cart.css'
+import '../componentes/css/Cart.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faXmark} from '@fortawesome/free-solid-svg-icons'
 
 
 
 
- function Cart() {
+ function Cart({}) {
 
   const { cart, deleteItem, getItemQty, getItemPrice, emptyCart } = useContext(CartContext)
 
@@ -25,18 +27,19 @@ import '../componentes/css/Cart.css'
             <div className='cartContainer'>
               <p className='cantidadCart'>Producto</p>
               <p className='precioCart'>Precio Unitario</p>
-              <p className='subtotalCart'>Precio Total</p>
+              <p className='subtotalCart'>Total</p>
             </div>
           </div>
           {cart.map(productoDetail => (
 
             <div className='lineCart'>
               <div className='cartContainer'>
-                <img className='imgProducto img-fluid' src={productoDetail.pictureURL} alt={"Producto1"} width="70px" />
+                <img className='imgProducto img-fluid' src={productoDetail.pictureURL} alt={"Producto1"}  />
                 <p className='cantidadCart'>{productoDetail.cantidad} x {productoDetail.nombre}</p>
-                <p className='precioCart'>Precio: {productoDetail.price}</p>
-                <p className='subtotalCart'>Subtotal: ${productoDetail.cantidad* productoDetail.price}</p>
-                <p onClick={() => deleteItem(productoDetail.id)} className='eliminarItemCard'><img className='imgBasura img-fluid' src={productoDetail.pictureURL} alt={"Producto1"} width="30px" /></p>
+                <p className='precioCart'>$ {productoDetail.price}</p>
+                <p className='subtotalCart'> ${productoDetail.cantidad* productoDetail.price}</p>
+                
+                <p onClick={() => deleteItem(productoDetail.id)} className='eliminarItemCard'><FontAwesomeIcon className='faXmark' icon={faXmark} /></p>
               </div>
             </div>
           ))}

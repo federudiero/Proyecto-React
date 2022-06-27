@@ -1,5 +1,16 @@
 .divItenListContainer {
 
-  background-color: rgb(0, 0, 0);
+
   
+}
+.divTituloPortada{
+
+  text-align: center;
+
+  background-image: linear-gradient(to top, #313234 0%, #2a2727 100%);
+}
+.TituloPortada{
+  padding: 30px;
+  font-size: 40px;
+  color: antiquewhite;
 }

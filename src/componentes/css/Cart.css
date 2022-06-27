@@ -132,3 +132,22 @@
 }
 
 
+.imgProducto{
+  border-radius: 30%;
+  width:100px;
+  height: 100px;
+}
+.faXmark{
+  width:30px;
+  height: 30px;
+  color: #767676;
+  transition: 1s;
+
+}
+.faXmark:hover{
+  width:30px;
+  height: 30px;
+  color: #d93d3d;
+  transition: 1s;
+
+}

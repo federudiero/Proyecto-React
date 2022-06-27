@@ -63,6 +63,11 @@ const isInCart=(id)=>{
 
   }
   
+
+  
+  
+  
+  
   return (
 
     <Provider value={{isInCart,addItem,deleteItem,emptyCart,getItemPrice,getItemQty,cart}}>{children}</Provider>

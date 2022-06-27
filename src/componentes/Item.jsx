@@ -12,7 +12,51 @@ const {id ,nombre,price,pictureURL } = producto
 
 
 <>
-<div className='divContainerCard'>
+<div className="card text-center  animate__animated animate__fadeInUp ">
+      <div className="overflow">
+        <img src={pictureURL} alt="a wallpaper" className="card-img-top" />
+      </div>
+      <div className="card-body text-light">
+        <h4 className="card-title">{nombre}</h4>
+        <p className="card-text text-secondary">
+        ${price}
+        </p>
+        <Link  to={`/item/${id}`} >
+      <Button className="button" variant="primary">
+       ver detalle
+     </Button>
+                          
+  </Link>
+        
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <div className='divContainerCard'>
 
    <Card  className='Card' >
    
@@ -36,7 +80,7 @@ const {id ,nombre,price,pictureURL } = producto
   </div>
   </Card.Body>
 </Card>
-</div>
+</div> */}
 </>
   )
 }
