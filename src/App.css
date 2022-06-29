@@ -38,6 +38,9 @@
 
 
 /* boton de los link NavBar*/
+.navbar{
+  justify-content: space-evenly
+}
 .btnNavBar{
   background-color: rgba(65, 125, 184, 0.374);
   margin: 2px;

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import React  from 'react'
 import ItemDetail from "./ItemDetail";
 import {useParams} from 'react-router-dom';
-
+import {getDoc ,getFirestore,doc, onSnapshot} from 'firebase/firestore'
 
 let productos=[
   {
@@ -723,29 +723,17 @@ function ItemDetailContainer() {
    
        
     useEffect(() => {
- 
-          
-   
-            const computadora= new Promise((res,rej)=>{
-              setTimeout(()=>
-              {
-                const producto =  res(productos.find(item=>item.id==id))
-                console.log(producto + "aca tengo el producto")
-              },2000)
-            })
-            computadora
-            .then((producto)=>{
-                setProductoDetail(producto)
-            })
-        
-          
-            .catch((error)=>{
-              console.error("error",error)
-            })
-        
-            .finally(()=>{
-        
-            })
+           const db = getFirestore();
+           const productRef=doc(db,'productos',id)
+           getDoc(productRef).then((snapshot)=>{
+            setProductoDetail({...snapshot.data(),id:snapshot.id})
+
+           }).catch((error)=>{
+            console.log(error)
+          }).finally(()=>{
+            console.log("finalizo ")
+          })
+
             
           }, [id])
       

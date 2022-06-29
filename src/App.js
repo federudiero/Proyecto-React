@@ -7,12 +7,28 @@ import ItemListContainer from './componentes/ItemListContainer';
 import NavBar from './componentes/NavBar';
 import MyProvider from "./componentes/Context/CartContext";
 import Cart from './componentes/Cart';
+import { initializeApp } from "firebase/app";
 
 
 
- 
+
 
 function App() {
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDW8HhhFIQ7G0Ljey8rnzMSjPBtrYlHNLE",
+    authDomain: "proyecto-react-57f61.firebaseapp.com",
+    projectId: "proyecto-react-57f61",
+    storageBucket: "proyecto-react-57f61.appspot.com",
+    messagingSenderId: "559240701753",
+    appId: "1:559240701753:web:abad7a8e750df7c13aeae8",
+    measurementId: "G-GSY22MHQPK"
+  };
+  
+  
+  initializeApp(firebaseConfig);
+  
+   
 
 //   const onAdd=(count)=>{
     
