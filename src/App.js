@@ -8,6 +8,9 @@ import NavBar from './componentes/NavBar';
 import MyProvider from "./componentes/Context/CartContext";
 import Cart from './componentes/Cart';
 import { initializeApp } from "firebase/app";
+import FbCheckout from "./componentes/firebase/FbCheckout";
+import Footer from "./componentes/Footer";
+
 
 
 
@@ -56,9 +59,12 @@ function App() {
           <Route path='/item/:id' element={<ItemDetailContainer/>}></Route>
 
           <Route path="/cart" element={<Cart />} />
+         <Route path="/checkout/" element={<FbCheckout/>}></Route>
+        
 
 
       </Routes>
+      <Footer/>
       
       </BrowserRouter>
       </MyProvider>

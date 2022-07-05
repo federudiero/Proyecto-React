@@ -49,7 +49,7 @@ import {faXmark} from '@fortawesome/free-solid-svg-icons'
           <div className='labelTotal'>Importe total: ${getItemPrice()} ({getItemQty()} Producto/s)</div>
 
           <div>
-            <button className='btnAddCar btnFinalC'>Finalizar Compra</button>
+          <Link to="/checkout/"> <button className='btnAddCar btnFinalC'>Finalizar Compra</button></Link>
             <button className='btnVaciarCarrito' onClick={emptyCart}>Vaciar Carrito</button>
           </div>
           </div>
