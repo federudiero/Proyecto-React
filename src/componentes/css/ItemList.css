@@ -6,6 +6,6 @@
     gap: 5rem;
     grid-auto-rows: 24rem;
     grid-template-columns: repeat(auto-fill, minmax(16rem ,1fr) );
-    background-image: linear-gradient(to top, #EDE9E7 0%, #EDE9E7 100%);
+    background-image: linear-gradient(to top, #936047 0%, #EDE9E7 100%);
    
 }

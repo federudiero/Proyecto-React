@@ -1,19 +1,7 @@
-.divTest{
-    background-color: rgba(216, 176, 176, 0.186);
-    display: flex;
-    height: 150px;
-    width: 370px;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 15%;
-    
-  
 
-    
-}
 .divContador{
     display: flex;
+    justify-content: center
     
 }
 .scr{
@@ -26,22 +14,10 @@
     font-weight: 600;
 }
 
+.DivContainerContador{
+    display: flex;
+  
 
-.botonAgregarCarrito{
-    height: 60px;
-    width: 150px;
-    background-color: rgb(23, 23, 23);
-    color: rgb(197, 197, 197);
-    border: 2px solid rgb(0, 0, 0);
-    transition: 1s;
-    border-radius: 20%;
 }
-.botonAgregarCarrito:hover{
-    height: 60px;
-    width: 150px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(197, 197, 197);
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 20%;
-    transition: 0.8s;
-}
+
+

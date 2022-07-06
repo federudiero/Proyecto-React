@@ -5,7 +5,22 @@ const{Provider}= CartContext;
 
 function MyProvider({children}) {
   
-  const [cart,setCart]= useState([])
+  const [cart,setCart]= useState(
+   []
+
+  )
+  const setLocalStorage= value =>{
+    try {
+      setCart(value);
+      
+    } catch (error) {
+      console.error(error)
+      
+    }
+  }
+
+
+
 
  //item detail se vA A ENCargar el producto al cart,sin pisar a los agregados ,y si esta duplicado aumenta la cantidad
 const addItem=(item,count)=>{

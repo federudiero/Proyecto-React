@@ -1,13 +1,13 @@
 
-import React from 'react'
-import {Button} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
-import {useState} from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import '../componentes/css/ItemDetail.css'
-import ItemCount from './ItemCount';
 import { useContext } from 'react';
-import  { CartContext } from './Context/CartContext';
+import '../componentes/css/ItemDetail.css';
+import { CartContext } from './Context/CartContext';
+import ItemCount from './ItemCount';
+import swall from 'sweetalert'
+
 
 
 
@@ -15,19 +15,19 @@ import  { CartContext } from './Context/CartContext';
 function ItemDetail( {productoDetail}) {
   
 
-  const {id, nombre,price,pictureURL ,description ,stock } = productoDetail
+  const {id, nombre,price,pictureURL,description ,stock } = productoDetail
  
 
   const [unidades, setUnidades] = useState();
   const [count, setCount] = useState(1)  
 
-  const {isInCart,addItem} =useContext(CartContext)
+  const {isInCart,addItem,getItemQty} =useContext(CartContext)
   
   
   function onAdd(count){
     console.log(count)
     
-    alert(`Se han agregado: ${count} productos`);
+    swall(`Se han agregado: ${count} productos`);
      isInCart(productoDetail.id);
     addItem(productoDetail,count);
     
@@ -40,10 +40,10 @@ function ItemDetail( {productoDetail}) {
 
   
   const sumar= ()=>{
-    count<stock? setCount(count+1): alert("no puedes agregar mas productos")
+    count<stock? setCount(count+1): swall("no puedes agregar mas productos del que hay en stock")
     }
   const restar= ()=>{
-    count>1? setCount(count-1): alert("no puedes agregar mas productos")
+    count>1? setCount(count-1): swall("no puedes agregar menos de un producto")
   }
   
   
@@ -53,7 +53,9 @@ function ItemDetail( {productoDetail}) {
       <div className='DivContainerDetail'>
     <div className='divCONtainerItem'>
 <div  className="DIvcard">
+  <div className='divIMG'>
   <img variant="top"  src={pictureURL} className="imgDetailContainer"/>
+  </div>
   <div className="DIvcardBody">
     <h2 className="h2cardTitle">{nombre}</h2>
     <p className="pcardText">
@@ -68,7 +70,22 @@ function ItemDetail( {productoDetail}) {
   <div>
     
         <Link  to={`/`}  ><button className="btn-fin" >regresar</button></Link>
-        <button className='btn-fin'>{unidades > 0 ? <Link to={'/cart'}  className="btn-fin">Terminar mi compra</Link>:<ItemCount stock={stock} sumar={sumar} restar={restar} count={count}  onAdd={onAdd}/>} </button>
+        <button className='btn-fin'>
+          {unidades > 0 ?
+          
+          <Link to={'/cart'}  className="btn-fin">Terminar mi compra</Link>
+          
+          :
+          
+          <ItemCount 
+          stock={stock} 
+          sumar={sumar} 
+          restar={restar} 
+
+          count={count}  
+          onAdd={onAdd}/>} 
+          
+          </button>
         
 
        
@@ -79,6 +96,7 @@ function ItemDetail( {productoDetail}) {
 </div>
 
 )}
+
     </>
   )
 }

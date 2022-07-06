@@ -1,11 +1,14 @@
 
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Toolbar from '@mui/material/Toolbar';
+import { formGroupClasses } from '@mui/material';
 import { useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import {Link, useParams } from 'react-router-dom';
 import CartWidget from './CartWidget';
+import {Nav,Container,Navbar ,NavDropdown} from 'react-bootstrap'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faShop} from '@fortawesome/free-solid-svg-icons'
+
+
+
 
 
 
@@ -28,19 +31,47 @@ const  NavBar= ({}) => {
   
 
   
-  return (
-          <nav className="navbar bg-dark">
-            <div className=" NavbarDIV">
-              <Link to="/"><button className='btnNavBar'>Inicio</button></Link>     
-              <Link  to="/category/notebook" ><button className='btnNavBar'>Notebook</button></Link>
-              <Link to="/category/celulares" ><button className='btnNavBar'>Celulares</button></Link>
-              <Link to="/category/televisores" ><button className='btnNavBar'>Televisores</button></Link>
+  return (<>
+  
+
+<Navbar bg="dark" expand="lg">
+  <Container>
+
+    <Navbar.Brand ><FontAwesomeIcon className='IconEcommerce' icon={faShop} /></Navbar.Brand>
+
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="me-auto">
+        
+        <div className=" NavbarDIV">
+                 
+               <Link  className='LinkBTN'  to="/" >Inicio</Link> 
+              <Link  className='LinkBTN'  to="/category/notebook" >Notebook</Link>
+              <Link  className='LinkBTN' to="/category/celulares" >Celulares</Link>
+              <Link  className='LinkBTN' to="/category/televisores" >Televisores</Link>
              
               
               
             </div>
-            <Link to="/cart" className="carrito" >   <CartWidget  /></Link>
-          </nav>
+        
+      </Nav>
+    </Navbar.Collapse>
+    <Link to="/cart" className="carrito" >   <CartWidget  /></Link>
+  </Container>
+</Navbar>
+
+
+
+
+
+
+
+
+
+
+         
+          </>
+
   );
 };
 export default NavBar;

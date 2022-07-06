@@ -1,11 +1,11 @@
 .DivContainerDetail{
-    background-color: rgb(224, 224, 224);
+    background-image: linear-gradient(to top, #8b827a 0%, #EDE9E7 100%);
    display: flex;
    justify-content: center;
 }
 .divCONtainerItem{
     margin: 30px;
-    border: 1px solid;
+   
 }
 
 .DIvcard{
@@ -16,14 +16,11 @@
     justify-content: space-evenly;
     align-content: space-around;
     align-items: center;
-   
-   
-}
-.imgDetailContainer{
     
-    height: 300px;
-    width: 300px;
+   
+   
 }
+
 .h2cardTitle{
     padding: 20px;
     padding-bottom: 10px;
@@ -37,8 +34,8 @@
 .precioLi{
     font-size: 30px;
     font-weight: 600;
+    margin-bottom: 60px;
 }
-
 
 
 

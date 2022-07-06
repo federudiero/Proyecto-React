@@ -3,7 +3,8 @@ import {useState, useContext} from 'react';
 import '../css/FbCheckout.css'
 import  { CartContext } from '../Context/CartContext';
 
-import { addDoc, collection, getFirestore } from 'firebase/firestore';    
+import { addDoc, collection, getFirestore } from 'firebase/firestore';  
+import swall from 'sweetalert'  
   
 const FbCheckout = () => {
    // Contexto de Carrito.
@@ -74,7 +75,7 @@ const FbCheckout = () => {
        addDoc(orderCollection, order).then(({ id }) => {
            setIdCompra(id)
        })} else{
-           alert("Por favor, ingrese todos los datos requeridos.")
+        swall("Por favor, ingrese todos los datos requeridos.")
        }
 
    }
