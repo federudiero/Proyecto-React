@@ -2,9 +2,27 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Ecommerce project for coderhouse
 
-In the project directory, you can run:
+This project is created with the react language
+some libraries were used :
+
+    
+    (icons)             "@fortawesome  
+    (icons)             "@mui/icons-material": "^5.8.0", 
+    (icons)             "@mui/material": "^5.8.1",
+    (navBar)            "bootstrap": "^5.1.3",
+    (data base)         "firebase": "^9.8.4",
+    (form)              "formik": "^2.2.9",
+    (card)              "react-bootstrap": "^2.4.0",
+    (card / buttons)    "styled-components": "^5.3.5",
+    (alert messages)    "sweetalert": "^2.1.2",
+
+
+
+    In a nutshell, you can find the necessary dependencies to build this project.
+   
+
 
 ### `npm start`
 

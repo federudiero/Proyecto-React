@@ -5,6 +5,17 @@ import '../componentes/css/ItenListContainer.css'
 import  Carousel from './Carousel'
 import {collection,getDocs ,getFirestore,query ,where} from 'firebase/firestore'
 
+
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// import {Link } from 'react-router-dom';
+// import {faShop} from '@fortawesome/free-solid-svg-icons';
+// <div>
+//       <FontAwesomeIcon to="/" className='IconEcommerce' icon={faShop}/>  
+//       <FontAwesomeIcon className='IconEcommerce' icon={faShop} />
+//       <FontAwesomeIcon className='IconEcommerce' icon={faShop} />
+//       <FontAwesomeIcon className='IconEcommerce' icon={faShop} />
+//       </div>
+
 function ItemListContainer() {
   const {id} =useParams();
   
@@ -45,17 +56,19 @@ getDocs(pruductsCollection).then(snapshot =>{
 
   return (
     <>
-    { <Carousel/>}
+     <Carousel/>
     <div className='divTituloPortada'><h1 className='TituloPortada'>Ecommerce</h1></div>
    
     <div className='divItenListContainer'>
 
       
 
-      {<ItemList   producto={producto}/>}
+      
+
+      <ItemList   producto={producto}/>
     </div>
 
-   
+
     </>
   )
 }

@@ -9,9 +9,9 @@ function CartWidget() {
   return (
       <>
       {getItemQty()>0&&<span>{getItemQty()}</span>}
-      <Badge badgeContext={getItemQty()} color="primary">
-    <AddShoppingCartIcon  />
-    </Badge>
+      
+    <AddShoppingCartIcon  badgeContext={getItemQty()}/>
+   
     
 
     </>

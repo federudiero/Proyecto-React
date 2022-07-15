@@ -1,24 +1,49 @@
 .DivContainerDetail{
-    background-image: linear-gradient(to top, #8b827a 0%, #EDE9E7 100%);
+    background-image: linear-gradient(to top, #2c2c2b 0%, #8e8e8e 100%);
    display: flex;
    justify-content: center;
+
 }
 .divCONtainerItem{
-    margin: 30px;
+    margin: 40px;
+    
+    border: 1px solid #1e223f;
+ box-shadow:    0px 0px 29px 6px black;
    
+   
+}
+.DIvcardBody{
+    height: 400px;
+    width: 500px;
+    background-color: lightslategrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .DIvcard{
     
     display: flex;
    
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
     align-content: space-around;
     align-items: center;
     
    
    
+}
+.DivPContador{
+    display: flex;
+    background-color: white;
+    height: 500px;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    justify-content: space-evenly
 }
 
 .h2cardTitle{
@@ -28,29 +53,291 @@
 }
 .pcardText{
     padding: 20px;
-    height: 200px;
-    width: 600px;
+   
+    width: 400px;
 }
 .precioLi{
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 35px;
+    margin: 10px;
+    padding: 11px;
+ 
     margin-bottom: 60px;
+    border: 2px solid #9b2a2a;
+    background-color: #e6e6e6;
+    color: #000000;
+    border-radius: 10%;
+    box-shadow: -2px 0px 25px 0px;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 .btn-fin{
-    background-color: #292b2c;
-    color: #c7c7c7;
+    background-color:rgb(34 33 33);
+    border: 1px solid;
+    border-right: 0px;
+   border-bottom: 0px;
+    border-top: 0px;
+    border-left-width: thick ; 
+   
+    cursor: pointer;
+    color: #d0d0d0;
     text-decoration: none;
     margin: 3px;
+}
+
+
+.imgDetailContainer{
+    height: 400px;
+    width: 400px;
+    
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1450px){
+
+   
+    .DIvcardBody{
+        height: 400px;
+        width: 400px;
+        background-color: lightslategrey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .DIvcard{
+        
+        display: flex;
+       
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+        
+       
+       
+    }
+    .DivPContador{
+        display: flex;
+        background-color: white;
+        height: 500px;
+        width: 400px;
+        flex-direction: column;
+        align-items: center;
+        
+        
+        justify-content: space-evenly
+    }
+
+    .imgDetailContainer{
+        height: 400px;
+        width: 400px;
+        
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 1270px){
+
+    .DIvcard{
+    
+        display: flex;
+       
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+        
+       
+       
+    }
+    .DIvcardBody{
+        height: 400px;
+        width: 400px;
+        background-color: lightslategrey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .DIvcard{
+        
+        display: flex;
+       
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+        
+       
+       
+    }
+    .DivPContador{
+        display: flex;
+        background-color: white;
+        height: 500px;
+        width: 400px;
+        flex-direction: column;
+        align-items: center;
+        
+        
+        justify-content: space-evenly
+    }
+
+    .imgDetailContainer{
+        height: 400px;
+        width: 400px;
+        
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 460px){
+
+    .DIvcard{
+    
+        display: flex;
+       
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+        
+       
+       
+    }
+    .DIvcardBody{
+        height: 500px;
+        width: 300px;
+        background-color: lightslategrey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .DIvcard{
+        
+        display: flex;
+       
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+        
+       
+       
+    }
+    .DivPContador{
+        display: flex;
+        background-color: white;
+        height: 500px;
+        width: 350px;
+        flex-direction: column;
+        align-items: center;
+        
+        
+        justify-content: space-evenly
+    }
+
+    .imgDetailContainer{
+        height: 300px;
+        width: 300px;
+        
+    }
+    .pcardText{
+        padding: 20px;
+       
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 300px){
+
+    .DIvcard{
+    
+        display: flex;
+       
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+        
+       
+       
+    }
+    .DIvcardBody{
+        height: 500px;
+        width: 270px;
+        background-color: lightslategrey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .DIvcard{
+        
+        display: flex;
+       
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+        
+       
+       
+    }
+    .DivPContador{
+        display: flex;
+        background-color: white;
+        height: 550px;
+        width: 270px;
+        flex-direction: column;
+        align-items: center;
+        
+        
+        justify-content: space-evenly
+    }
+
+    .imgDetailContainer{
+        width: 270px;
+        width: 270px;
+        
+    }
+    .pcardText{
+        padding: 20px;
+       
+        width: 270px;
+    }
+    .precioLi{
+        font-size: 20px;
+        margin: 10px;
+        padding: 11px;
+     
+        margin-bottom: 60px;
+        border: 2px solid #9b2a2a;
+        background-color: #e6e6e6;
+        color: #000000;
+        border-radius: 10%;
+        box-shadow: -2px 0px 25px 0px;
+    }
+    
 }

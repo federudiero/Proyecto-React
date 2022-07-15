@@ -62,15 +62,18 @@ function ItemDetail( {productoDetail}) {
       {description}
     </p>
   </div>
+  <div className='DivPContador'>
   <ul className="list-group-flush">
     <p className='precioLi'>Precio : ${price}</p>
-    <li>Stock {stock}</li>
-    <li>ID {id}</li>
+    <p>Stock : <h2>{stock}</h2></p>
+    <p>ID: {id}</p>
   </ul>
   <div>
     
         <Link  to={`/`}  ><button className="btn-fin" >regresar</button></Link>
         <button className='btn-fin'>
+
+          
           {unidades > 0 ?
           
           <Link to={'/cart'}  className="btn-fin">Terminar mi compra</Link>
@@ -89,6 +92,7 @@ function ItemDetail( {productoDetail}) {
         
 
        
+  </div>
   </div>
 </div>
 

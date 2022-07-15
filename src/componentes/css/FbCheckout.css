@@ -1,10 +1,10 @@
 .checkoutContainer{
-    background-color: rgb(218, 218, 218);
+    background-image: linear-gradient(to top, #2c2c2b 0%, #8e8e8e 100%);
     padding: 50px;
 }
 .divContainerCompraRealizada{
     border: 2px solid rgb(57, 57, 57);
-    background-color: rgb(186, 183, 183);
+    background-color: rgb(166, 166, 166);
     height: 600px;
     width: 500px;
    
@@ -34,7 +34,7 @@ display: flex;
 .DivContenedorFormulario{
     display: flex;
     flex-direction: column;
-    background-color: rgb(135, 135, 135);
+    background-color: rgb(118, 129, 154);
     text-align: center;
     padding: 50px;
     height: 600px;
@@ -42,6 +42,7 @@ display: flex;
     margin: auto;
     border-radius: 10%;
     border: 3px solid black;
+    box-shadow: 0px 0px 25px 0px;
     
     
   
@@ -56,3 +57,30 @@ display: flex;
 .BDescripcion{
     margin: 30px;
 }
+
+
+
+
+
+@media screen and (max-width: 500px){
+
+    .DivContenedorFormulario{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(135, 135, 135);
+        text-align: center;
+        padding: 50px;
+        height: 600px;
+        width: 300px;
+        margin: auto;
+        border-radius: 10%;
+        border: 3px solid black;
+        
+        
+      
+    
+    }
+
+}
+

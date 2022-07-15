@@ -4,10 +4,11 @@
   
 }
 .divTituloPortada{
-
+  height: 120px;
   text-align: center;
 
   background-image: linear-gradient(to top, #333333 0%,  #131019 100%);
+ 
 }
 .TituloPortada{
   padding: 30px;

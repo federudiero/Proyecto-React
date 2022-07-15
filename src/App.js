@@ -16,6 +16,7 @@ import Footer from "./componentes/Footer";
 
 
 
+
 function App() {
 
   const firebaseConfig = {
@@ -64,6 +65,7 @@ function App() {
 
 
       </Routes>
+     
       <Footer/>
       
       </BrowserRouter>

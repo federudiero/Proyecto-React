@@ -1,7 +1,7 @@
 footer{
     background: #131019;
     padding-bottom: 0.1px;
-    height: 200px;
+    height: 250px;
 }
 
 .footer-content{
@@ -16,7 +16,12 @@ footer{
 
 .brand{
     font-weight: 500;
-    font-size: 40px;
+    font-size: 30px;
+    color: #ffffff;
+    
+}
+.LinkFooter{
+    text-decoration: none;
 }
 
 
@@ -27,11 +32,11 @@ footer{
 
 
 .line{
-    width: 90%;
+    width: 40%;
     max-width: 1200px;
     margin: auto;
     height: 2px;
-    background: #fff;
+    background: rgb(255, 255, 255);
     margin-bottom: 60px;
 }
 

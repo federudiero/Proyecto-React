@@ -5,10 +5,14 @@ import  { CartContext } from '../Context/CartContext';
 
 import { addDoc, collection, getFirestore } from 'firebase/firestore';  
 import swall from 'sweetalert'  
+import { Link } from 'react-router-dom';
   
 const FbCheckout = () => {
    // Contexto de Carrito.
-   const { cart,  getItemPrice } = useContext(CartContext)
+   const { cart,  getItemPrice, emptyCart} = useContext(CartContext)
+   
+   
+  
    //Nombre de usuario, email, celular en estado.
    const [name, setName] = useState("")
    const [email, setEmail] = useState("")
@@ -38,7 +42,7 @@ const FbCheckout = () => {
 
 
    function validarNombre() {
-       if (/^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/.test(name)) {
+       if (/^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/.test(name)  ) {
            setValidation({ ...validation, name: true });
        } else {
            setValidation({ ...validation, name: false });
@@ -68,6 +72,7 @@ const FbCheckout = () => {
            buyer: { name, email, cel },
            items: cart,
            total: getItemPrice()
+          
        }
 
        if (validation.name && validation.email && validation.cel){
@@ -93,7 +98,7 @@ const FbCheckout = () => {
 
 
     <div className='checkoutContainer'>
-        {idCompra != "" ?
+        {idCompra != ""  ?
 
             <div className='divContainerCompraRealizada '>
 
@@ -118,9 +123,16 @@ const FbCheckout = () => {
                 </div>
 
                 <h6 className='titleT'>Nos pondremos en contacto para coordinar la entrega del producto.</h6>
+                
                
-            
+                {emptyCart()}
+
+               
+               
+             <Link to="/"><button className='btnIrDeCompras'>Ir de compras</button></Link>
             </div>
+            
+
             :
             <>
             <div className='DivContenedorFormulario'>
