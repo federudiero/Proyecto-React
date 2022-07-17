@@ -47,7 +47,7 @@ getDocs(pruductsCollection).then(snapshot =>{
     }
   }, [id])
 
-  console.log(producto)
+ 
   
 
 

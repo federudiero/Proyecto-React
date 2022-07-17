@@ -18,9 +18,10 @@ some libraries were used :
     (card / buttons)    "styled-components": "^5.3.5",
     (alert messages)    "sweetalert": "^2.1.2",
 
-
+deploy: https://proyecto-react-57f61.web.app
 
     In a nutshell, you can find the necessary dependencies to build this project.
+   
    
 
 

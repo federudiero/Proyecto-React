@@ -27,7 +27,7 @@ function ItemDetailContainer() {
             
           }, [id])
       
-          console.log(productoDetail) 
+         
        
            
             

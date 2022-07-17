@@ -25,7 +25,7 @@ function ItemDetail( {productoDetail}) {
   
   
   function onAdd(count){
-    console.log(count)
+   
     
     swall(`Se han agregado: ${count} productos`);
      isInCart(productoDetail.id);
